@@ -1,24 +1,20 @@
 import 'package:flutter/material.dart';
-import 'DiceRollerUi.dart';
-import 'dart:math';
-import 'GradientManager.dart';
+import 'splash_screen.dart';
 
 void main() {
-  runApp(DiceRoller());
+  runApp(MyApp());
 }
 
-class DiceRoller extends StatefulWidget {
-  DiceRollerState createState() => DiceRollerState();
-}
-
-class DiceRollerState extends State<DiceRoller> {
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Dice Roller App",
-      home: DiceRollerUi(),
+      title: 'Flutter Quiz',
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+      ),
+      home: SplashScreen(), // Set SplashScreen as the first screen
     );
   }
 }
